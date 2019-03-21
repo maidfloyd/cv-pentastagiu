@@ -1,0 +1,16 @@
+.dashed {
+    border: 2px dashed black;
+}
+header {
+    text-align: center;
+}
+.floated {
+    float: left;
+}
+.skills li{
+    float: left;
+    margin:10px;
+    padding: 10px;
+    border: 1px solid black;
+    list-style-type: square;
+}
