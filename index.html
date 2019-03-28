@@ -1,79 +1,90 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <link href="./style.css" type="text/css" rel="stylesheet">
         <title>CV - create page</title>
-    </head>
-    <body>
-        <header>
-            <h1>Marian Ilascu</h1>
-            <h2><em>JS Developer</em></h2>
-         </header>
 
-        <div clas="about-me container">
+    </head>
+
+    <body>
+        
+        <header>
+            <h2>Marian Ilascu</h2>
+            <h3><em>JS Developer</em></h3>
+        </header>
+
+         <br><br><br>
+
+        <article class="about-me">
             <fieldset class="dashed"> 
                 <legend>About me</legend>
+
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
         
-            </fieldset>
-           
-        </div>
+            </fieldset>           
+        </article>
 
-        <div class="work-experience container">
+        <article class="work">
             <fieldset class="dashed">
                 <legend>Work Experience</legend>
-            <div>
-                
-                <p class="floated">
-                     JS Developer <br>
-                     Pentalog <br>
-                      May 2017 - Present
-                </p>
-                
-                
-                 <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                 </p>
-                
-            </div>
-            <div>
-                    
-               <p class="floated">
-                 JS Developer <br>
-                  Pentalog <br>
-                  May 2017 - Present
-              </p>
-                        
-                <div>
+
+            <section class="left">
+                <div class="experience">
                     <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        <strong>JS Developer </strong> <br>
+                        Pentalog <br>
+                        May 2017 - Present
+                    </p>             
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
                     </p>
                 </div>
-            </div>
-        </div>
-    </fieldset>
+            
+            </section>
 
-    <div class="skills container">
+            <section class="left">
+                <div class="experience">   
+                    <p>
+                        <strong>JS Developer</strong> <br>
+                        Pentalog <br>
+                        May 2017 - Present
+                    </p>
+                </div>
+                <div class="description">      
+                    <p >
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                    </p>
+                </div> 
+            
+            </section>
+
+            </fieldset>
+        </article>
+    
+    <article class="skills">
 
         <fieldset class="dashed">
             <legend>Skills</legend>
 
             <ul>                
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>React</li>
-                <li>Node</li>
-                <li>AWS</li>
-                <li>MongoDB</li>
-
+                <li class="tooltip">JavaScript<span class="tooltiptext">JavaScript</span></li>
+                <li class="tooltip">HTML<span class="tooltiptext">HTML</span></li>
+                <li class="tooltip">CSS<span class="tooltiptext">CSS</span></li>
+                <li class="tooltip">React<span class="tooltiptext">React</span></li>
+                <li class="tooltip">Node<span class="tooltiptext">Node</span></li>
+                <li class="tooltip">AWS<span class="tooltiptext">AWS</span></li>
+                <li class="tooltip">MongoDB<span class="tooltiptext">MongoDB</span></li>
+                
             </ul>
         
         </fieldset>          
         
-    </div>
+    </article>
 
     </body>
 </html>

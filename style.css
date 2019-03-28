@@ -1,16 +1,139 @@
 .dashed {
-    border: 2px dashed black;
+    border: 2px dashed #000;
 }
+
 header {
     text-align: center;
 }
-.floated {
-    float: left;
+
+.work {
+    display: flex; 
 }
-.skills li{
-    float: left;
-    margin:10px;
-    padding: 10px;
-    border: 1px solid black;
-    list-style-type: square;
+
+.left {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0 10%;
 }
+
+.experience {
+    width: 50%;
+    order: 1;
+}
+
+.description {
+    width: 50%;
+    order: 2;
+}
+
+
+/*.left div{
+    display: flex;
+    justify-content: space-between;
+}
+*/
+.skills {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.skills li {
+
+    margin: 15px;
+    padding: 5px;
+    border: 1px solid #000;   
+    list-style-image: url('./icon2.png'); 
+}
+
+ body {
+     width: 80%;
+     font: 14px Helvetica, sans-serif; 
+     font-weight: 500;
+     background-color: #F5E3E0;
+     margin: 10%;
+    
+}
+
+header:hover {
+    color: #0D2839; 
+    transition: background-color 1s;
+    font-size: 120%;
+    text-decoration: underline;
+}
+
+.about-me:hover {
+    background-color: #BBD1DE; 
+    transition: background-color 1s;
+}
+
+.about-me:hover legend {
+    font-size: 20px;
+    color: #0D2839;
+}
+
+.work:hover {
+    background-color: #BBD1DE;
+    transition: background-color 1s;
+}
+
+.work:hover legend {
+    font-size: 20px;
+    color: #0D2839;
+}
+
+.left:hover {
+    font-size: 120%;
+}
+
+.skills:hover {
+    background-color: #BBD1DE;
+    transition: background-color 1s;
+}
+
+.skills:hover legend {
+    font-size: 20px;
+    color: #0D2839;
+}
+
+.skills li:hover {
+    background-color: #4F6A73;
+    font-size: 130%;
+    text-decoration: underline;    
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    opacity: 0.8;
+  }
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: #0D2839;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;   
+
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 60%;
+    margin-left: -60px;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+
+
+
+
+
+ /*li::before {
+    content: url('./icon.png');
+    width: 2px;
+    height: 2px;
+}
+*/
