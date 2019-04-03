@@ -1,103 +1,131 @@
+
+body {
+    font: normal 14px Helvetica, serif; 
+    color: #373737;
+    background-color: #F4F4F4;
+    margin: 10%;    
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:   'header'
+                           'about-me'
+                           'work'
+                           'skills';    
+}
+
 .dashed {
-    border: 2px dashed #000;
+    border: 2px dashed #373737;
+    border-radius: 10px;
 }
 
 header {
     text-align: center;
+    grid-area: header;
+    color: #C0B283;
+    font: bold 20px "Times New Roman", Times, serif;
+}  
+
+.about-me {
+    grid-area: about-me;
 }
 
 .work {
-    display: flex; 
+    grid-area: work;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(2, minmax(0, auto));
+    grid-template-areas: 'top'
+                         'bottom'; 
+    overflow: hidden;  
 }
 
 .left {
     display: flex;
     justify-content: space-between;
-    flex: 1 0 10%;
+}
+
+.top {
+    grid-area: top;
+}
+.bottom {
+    grid-area: bottom;
 }
 
 .experience {
     width: 50%;
-    order: 1;
 }
-
 .description {
     width: 50%;
-    order: 2;
-}
+ }
 
 
-/*.left div{
-    display: flex;
-    justify-content: space-between;
-}
-*/
 .skills {
-    display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    grid-area: skills;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(60px, 1fr));
+    grid-template-rows: repeat(7, auto);
+    grid-gap: 10px;
 }
 
 .skills li {
-
     margin: 15px;
     padding: 5px;
-    border: 1px solid #000;   
+    border: 1px solid #373737;   
     list-style-image: url('./icon2.png'); 
-}
+} 
 
- body {
-     width: 80%;
-     font: 14px Helvetica, sans-serif; 
-     font-weight: 500;
-     background-color: #F5E3E0;
-     margin: 10%;
-    
+li::before {
+    content: url('./icon2.png');
 }
 
 header:hover {
-    color: #0D2839; 
-    transition: background-color 1s;
-    font-size: 120%;
     text-decoration: underline;
+    animation-name: pulse;
+    animation-duration: 0.5s;
 }
 
 .about-me:hover {
-    background-color: #BBD1DE; 
-    transition: background-color 1s;
+    animation-name: pulse;
+    animation-duration: 0.5s;
 }
 
 .about-me:hover legend {
     font-size: 20px;
-    color: #0D2839;
+    color: #C0B283;
 }
 
 .work:hover {
-    background-color: #BBD1DE;
-    transition: background-color 1s;
+    animation-name: pulse;
+    animation-duration: 0.5s;
 }
 
 .work:hover legend {
     font-size: 20px;
-    color: #0D2839;
+    color: #C0B283;
 }
 
 .left:hover {
-    font-size: 120%;
+    font-size: 110%;
+}
+
+.left:hover strong {
+    color: #C0B283;
 }
 
 .skills:hover {
-    background-color: #BBD1DE;
-    transition: background-color 1s;
+    animation-name: pulse;
+    animation-duration: 0.5s
 }
 
 .skills:hover legend {
     font-size: 20px;
-    color: #0D2839;
+    color: #C0B283;
 }
 
 .skills li:hover {
-    background-color: #4F6A73;
+    background-color: #DCD0C0;
     font-size: 130%;
     text-decoration: underline;    
 }
@@ -111,7 +139,7 @@ header:hover {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 100px;
-    background-color: #0D2839;
+    background-color: #C0B283;
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -126,14 +154,28 @@ header:hover {
   
 .tooltip:hover .tooltiptext {
     visibility: visible;
-
-
-
-
-
- /*li::before {
-    content: url('./icon.png');
-    width: 2px;
-    height: 2px;
 }
-*/
+
+@keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.03, 1.03, 1.03);
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 1.1em;
+        line-height: 1.3;    
+    }
+}
