@@ -3,14 +3,16 @@ body {
     font: normal 14px Helvetica, serif; 
     color: #373737;
     background-color: #F4F4F4;
-    margin: 10%;    
+    margin: 10%;
+
     display: grid;
     grid-template-columns: 80%;
     grid-template-rows: repeat(4, auto);
     grid-template-areas:   'header'
                            'about-me'
                            'work'
-                           'skills';    
+                           'skills'; 
+    justify-content: center;
 }
 
 .dashed {
@@ -73,7 +75,8 @@ header {
     margin: 15px;
     padding: 5px;
     border: 1px solid #373737;   
-    list-style-image: url('./icon2.png'); 
+    /*
+    list-style-image: url('./icon2.png'); */
 } 
 
 li::before {
