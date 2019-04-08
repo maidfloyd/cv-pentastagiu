@@ -34,8 +34,7 @@ header {
 .work {
     grid-area: work;
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: repeat(2, minmax(0, auto));
+    grid-template: minmax(0, 1fr) / repeat(2, minmax(0, auto));
     grid-template-areas: 'top'
                          'bottom'; 
     overflow: hidden;  
